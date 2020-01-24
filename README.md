@@ -1,27 +1,33 @@
-# Project Proposal Worksheet
-
-Use this worksheet to prepare your proposal. For additional help completing this worksheet, refer to the [Project Proposal Example](project-proposal-example.md) in this repository.
+# Project Proposal: Rick and Morty Search
 
 ## Project Description
 
-Describe your project in 2 - 3 sentences using plain English.
+Rick and Morty Search allows you to search for your favorite characters or learn more about a new one. Enter the character name to search for him/her/them/it or select one of the random images that appear on the homepage
 
 ## Wireframes
 
-Links to your hand drawn or digital wireframes.
+![Screen Shot 2020-01-24 at 11 04 11 AM](https://user-images.githubusercontent.com/56045956/73088127-43678e80-3e99-11ea-940e-0d5bd27d75cd.png)
 
-### MVP User Stories
+![Screen Shot 2020-01-24 at 11 05 04 AM](https://user-images.githubusercontent.com/56045956/73088204-62feb700-3e99-11ea-9c52-7a8f5094941a.png)
 
-List the user stories that will be required to support your project MVP. Optionally, you may list post MVP (stretch goals) under a separate heading.
+## MVP User Stories
+
+#### MVP User Stories
+
+- As a user, I want to look up my favorite 'Rick and Morty' characters.
+- As a user, I would like to discover new characters or learn more about the ones I know.
+- As a user I would like to search for a character or click on an image and see a breakdown on that character.
+
+#### Post MVP Stretch Goals
+
+- As a user, I would like to search by different parameters like location or episode and return characters that fit those descriptions.
+- As a user I would like to be able to click on the location of a character and link to other characters in that same location.
+- As a user, I would like to rank the characters or add personal notes to their cards.
 
 ## API
 
-Link to the API's documentation you will use for your project.
+(https://rickandmortyapi.com/api/)
 
 ## Component Hierarchy
 
-Provide a link to a diagram of showing the React component hierarchy of your app.
-
-#### OPTIONAL:
-
-You can optionally can describe the components further and indicate which will have state or props.
+![Screen Shot 2020-01-24 at 11 09 30 AM](https://user-images.githubusercontent.com/56045956/73088501-0223ae80-3e9a-11ea-9dcb-79eeb073ed31.png)
