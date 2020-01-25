@@ -8,6 +8,7 @@ function SearchResults(props) {
       {results.map(item => (
         <div key={item.id} className="profilePic">
           <img src={item.image} />
+          <p className="captionName">{item.name}</p>
         </div>
       ))}
     </div>
