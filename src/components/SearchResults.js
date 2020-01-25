@@ -1,11 +1,11 @@
 import React from 'react';
 
 function SearchResults(props) {
-  const { data } = props;
-
+  const { results } = props;
+  console.log(results);
   return (
     <div className="gallery">
-      {data.map(item => (
+      {results.map(item => (
         <div key={item.id} className="profilePic">
           <img src={item.image} />
         </div>
