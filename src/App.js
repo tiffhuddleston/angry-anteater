@@ -11,27 +11,43 @@ function App() {
   };
 
   const [results, setData] = useState([]);
+  const [searchString, setSearchString] = useState('Rick');
+  const [lastSearch, setLastSearch] = useState('');
 
   useEffect(() => {
-    getData();
+    getData(searchString);
   }, []);
 
   function getData() {
-    const searchString = 'jerry';
     const url = `${searchOptions.api}${searchOptions.endpoint}?name=${searchString}`;
 
     fetch(url)
       .then(response => response.json())
       .then(response => {
         setData(response.results);
+        setLastSearch(searchString);
+        setSearchString('');
       })
       .catch(console.error);
   }
 
+  function handleChange(event) {
+    setSearchString(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    getData(searchString);
+  }
+
   return (
     <div>
-      <SearchHeader />
-      <SearchForm />
+      <SearchHeader lastSearch={lastSearch} />
+      <SearchForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        searchString={searchString}
+      />
       <SearchResults results={results} />
     </div>
   );

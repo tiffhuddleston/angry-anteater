@@ -1,13 +1,16 @@
 import React from 'react';
 
-function SearchForm() {
+function SearchForm(props) {
+  const { handleSubmit, handleChange, searchString } = props;
   return (
-    <form className="form-horizontal">
+    <form onSubmit={handleSubmit} className="form-horizontal">
       <input
         type="text"
         placeholder="search for life"
         name="searchString"
         required
+        onChange={handleChange}
+        value={searchString}
       />
       <button type="submit">Search</button>
     </form>
