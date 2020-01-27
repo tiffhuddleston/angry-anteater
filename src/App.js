@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 import SearchHeader from './components/SearchHeader';
 import SearchForm from './components/SearchForm';
 import SearchResults from './components/SearchResults';
+import FinalResult from './components/FinalResult';
 
 function App() {
   const searchOptions = {
@@ -13,9 +15,11 @@ function App() {
   const [results, setData] = useState([]);
   const [searchString, setSearchString] = useState('Rick');
   const [lastSearch, setLastSearch] = useState('');
+  const [singleChar, setSingleChar] = useState([0]);
 
   useEffect(() => {
     getData(searchString);
+    // thisCharacter(finalResult);
   }, []);
 
   function getData() {
@@ -27,6 +31,7 @@ function App() {
         setData(response.results);
         setLastSearch(searchString);
         setSearchString('');
+        setSingleChar(response.results);
       })
       .catch(console.error);
   }
@@ -48,7 +53,23 @@ function App() {
         handleSubmit={handleSubmit}
         searchString={searchString}
       />
-      <SearchResults results={results} />
+      <Route
+        path="/"
+        render={() => {
+          return <SearchResults results={results} />;
+        }}
+      />
+      <Route
+        exact
+        path="/finalresult/:name"
+        render={routerProps => (
+          <FinalResult
+            match={routerProps.match}
+            results={results}
+            singleChar={singleChar}
+          />
+        )}
+      />
     </div>
   );
 }

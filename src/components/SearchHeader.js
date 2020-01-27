@@ -6,7 +6,7 @@ function SearchHeader({ lastSearch }) {
       <header>
         <h1 className="title">Rick and Morty Search</h1>
         <p className="muted">
-          Showing results for <stron>{lastSearch}</stron>
+          Showing results for <strong>{lastSearch}</strong>
         </p>
       </header>
     </div>
