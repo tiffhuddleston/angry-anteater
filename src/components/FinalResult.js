@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from 'react';
 
 function FinalResult(props) {
-  const { match, results, singleChar } = props;
-  console.log(match);
+  const { match } = props;
 
-  //   useEffect(() => {
-  //     let thisChar = results.filter(singleChar =>
-  //       singleChar.name.match(results.match.params.results)
-  //     );
-  //     this.setState({ singleChar: thisChar[0] });
-  //   });
+  const [character, setCharacter] = useState(null);
 
-  let thisChar = results.filter(singleChar =>
-    singleChar.name.match(match.params.results)
-  );
+  useEffect(() => {
+    fetch(`https://rickandmortyapi.com/api/character/${match.params.id}`)
+      .then(response => response.json())
+      .then(response => {
+        setCharacter(response);
+        console.log(response);
+      })
+      .catch(console.error);
+  }, []);
+
+  if (!character) {
+    return null;
+  }
 
   return (
-    <div>
-      <p>{singleChar.name}</p>
+    <div className="describe">
+      <img src={character.image} alt="Photo of character" />
+      <p>Name: {character.name}</p>
+      <p>Status: {character.status}</p>
+      <p>Place of Origin: {character.origin.name}</p>
+      <p>Last Knows Location: {character.location.name}</p>
     </div>
   );
 }

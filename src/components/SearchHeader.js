@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SearchHeader({ lastSearch }) {
   return (
     <div>
-      <header>
-        <h1 className="title">Rick and Morty Search</h1>
-        <p className="muted">
-          Showing results for <strong>{lastSearch}</strong>
-        </p>
-      </header>
+      <Link to="/">
+        <header>
+          <h1 className="title">Rick and Morty Search</h1>
+        </header>
+      </Link>
+      <p className="muted">
+        Showing results for <strong>{lastSearch}</strong>
+      </p>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Route } from 'react-router-dom';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+// import './App.css';
 import SearchHeader from './components/SearchHeader';
 import SearchForm from './components/SearchForm';
 import SearchResults from './components/SearchResults';
@@ -15,7 +15,6 @@ function App() {
   const [results, setData] = useState([]);
   const [searchString, setSearchString] = useState('Rick');
   const [lastSearch, setLastSearch] = useState('');
-  const [singleChar, setSingleChar] = useState([0]);
 
   useEffect(() => {
     getData(searchString);
@@ -31,7 +30,6 @@ function App() {
         setData(response.results);
         setLastSearch(searchString);
         setSearchString('');
-        setSingleChar(response.results);
       })
       .catch(console.error);
   }
@@ -54,6 +52,7 @@ function App() {
         searchString={searchString}
       />
       <Route
+        exact
         path="/"
         render={() => {
           return <SearchResults results={results} />;
@@ -61,14 +60,8 @@ function App() {
       />
       <Route
         exact
-        path="/finalresult/:name"
-        render={routerProps => (
-          <FinalResult
-            match={routerProps.match}
-            results={results}
-            singleChar={singleChar}
-          />
-        )}
+        path="/character/:id"
+        render={routerProps => <FinalResult match={routerProps.match} />}
       />
     </div>
   );
