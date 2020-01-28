@@ -21,7 +21,7 @@ function FinalResult(props) {
 
   return (
     <div className="describe">
-      <img src={character.image} alt="Photo of character" />
+      <img src={character.image} alt="character" />
       <p>Name: {character.name}</p>
       <p>Status: {character.status}</p>
       <p>Place of Origin: {character.origin.name}</p>

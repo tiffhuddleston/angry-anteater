@@ -1,6 +1,6 @@
-/* This is mostly styling from the giphy app. Using this just for now, will make sure to refactor, clean up and change for myself.
 
-Set box-sizing for all elements */
+
+/*Set box-sizing for all elements */
 *,
 :after,
 :before {
@@ -90,6 +90,7 @@ the button and input when the browser is at least
 
 .title {
   color: white;
+  font-family: 'GetSchwifty', sans-serif;
 }
 
 @media (min-width: 600px) {
@@ -126,3 +127,13 @@ the button and input when the browser is at least
 .describe {
   color: white;
 }
+
+@font-face {
+  font-family: 'GetSchwifty';
+  font-style: normal;
+  font-weight: 400;
+  src: local('GetSchwifty')
+    url(public/rick_and_morty___font_pack__by_esteveztheart_dbjj064 3/GetSchwifty.ttf);
+}
+/Users/tiffanyhuddleston/sei/projects/project-2/public/rick_and_morty___font_pack__by_esteveztheart_dbjj064 3/GetSchwifty.ttf
+public/rick_and_morty___font_pack__by_esteveztheart_dbjj064 3/GetSchwifty.ttf

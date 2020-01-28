@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
-// import './App.css';
+import { Route } from 'react-router-dom';
 import SearchHeader from './components/SearchHeader';
 import SearchForm from './components/SearchForm';
 import SearchResults from './components/SearchResults';
 import FinalResult from './components/FinalResult';
+
+let charArray = ['Beth', 'Jerry', 'Rick', 'Morty', 'Summer'];
+
+let randomChar = charArray[Math.floor(Math.random() * charArray.length)];
+
+console.log(randomChar);
 
 function App() {
   const searchOptions = {
@@ -13,7 +18,7 @@ function App() {
   };
 
   const [results, setData] = useState([]);
-  const [searchString, setSearchString] = useState('Rick');
+  const [searchString, setSearchString] = useState(randomChar);
   const [lastSearch, setLastSearch] = useState('');
 
   useEffect(() => {

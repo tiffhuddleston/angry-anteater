@@ -12,7 +12,7 @@ function SearchResults(props) {
             <p className="captionName">
               <Link to={'/character/' + item.id}>
                 {' '}
-                <img src={item.image} />
+                <img src={item.image} alt={item.name} />
                 {item.name}
               </Link>
             </p>
