@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+
 function FinalResult(props) {
   const { match } = props;
 
@@ -10,7 +11,6 @@ function FinalResult(props) {
       .then(response => response.json())
       .then(response => {
         setCharacter(response);
-        console.log(response);
       })
       .catch(console.error);
   }, []);
@@ -21,13 +21,29 @@ function FinalResult(props) {
 
   return (
     <div className="describe">
-      <img src={character.image} alt="character" />
-      <p>Name: {character.name}</p>
-      <p>Status: {character.status}</p>
-      <p>Place of Origin: {character.origin.name}</p>
-      <p>Last Knows Location: {character.location.name}</p>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" img src={character.image} alt="character" />
+        <Card.Body>
+          <Card.Title>{character.name}</Card.Title>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+          <ListGroupItem>Status: {character.status}</ListGroupItem>
+          <ListGroupItem>
+            Place of Origin: {character.origin.name}
+          </ListGroupItem>
+          <ListGroupItem>
+            Last Knows Location: {character.location.name}
+          </ListGroupItem>
+        </ListGroup>
+      </Card>
     </div>
   );
 }
 
 export default FinalResult;
+
+// {/* <img src={character.image} alt="character" />
+// <p>Name: {character.name}</p>
+// <p>Status: {character.status}</p>
+// <p>Place of Origin: {character.origin.name}</p>
+// <p>Last Knows Location: {character.location.name}</p> */}
