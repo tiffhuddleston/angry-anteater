@@ -16,19 +16,19 @@
 /* Remove the body margin */
 body {
   font-family: sans-serif;
-  line-height: 1.5;
+  line-height: 2.5;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 2rem;
   background-color: black;
 }
 
 /* Style the button and tell it not to grow */
 button {
   background-color: var(--primary);
-  border: 0;
+  border: 1;
   color: var(--white);
   flex-grow: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1;
   padding: 0.75rem 1rem;
   text-transform: uppercase;
@@ -36,7 +36,6 @@ button {
 
 /* Add some margin on the left of any buttons
 that follow another button or an input */
-button + button,
 input + button {
   margin-left: 2px;
 }
@@ -51,7 +50,7 @@ input {
   border: 2px solid var(--secondary);
   color: var(--white);
   flex-grow: 1;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 0.75rem 1rem;
   width: 100%;
 }
@@ -88,7 +87,10 @@ the button and input when the browser is at least
 
 .title {
   color: white;
-  font-family: 'GetSchwifty', sans-serif;
+}
+
+.names {
+  color: white;
 }
 
 @media (min-width: 600px) {

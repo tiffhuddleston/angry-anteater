@@ -10,7 +10,7 @@ function SearchResults(props) {
         results.map(item => (
           <div key={item.id} className="profilePic">
             <p className="captionName">
-              <Link to={'/character/' + item.id}>
+              <Link className="names" to={'/character/' + item.id}>
                 {' '}
                 <img src={item.image} alt={item.name} />
                 {item.name}
