@@ -17,7 +17,7 @@ function App() {
   };
 
   const [results, setData] = useState([]);
-  const [searchString, setSearchString] = useState(randomChar);
+  const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
 
   useEffect(() => {

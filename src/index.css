@@ -113,8 +113,8 @@ input:hover {
 .nav {
   color: gray;
   font-family: 'Bangers', cursive;
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  justify-content: center;
 }
 
 .oops {
