@@ -9,7 +9,6 @@ function SearchHeader({ lastSearch }) {
         <Link to="/">
           <h2 className="nav">Home</h2>
         </Link>
-
         <Link to="/about">
           <h2 className="nav"> About</h2>
         </Link>

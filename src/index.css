@@ -76,15 +76,15 @@ input:hover {
   input + button {
     margin-left: 1rem;
   }
-  /* .gallery {
+  .gallery {
     column-count: 2;
-  } */
+  }
   .head {
     font-size: 1rem;
   }
 }
 
-/* @media (min-width: 1000px) {
+@media (min-width: 1000px) {
   .gallery {
     column-count: 3;
   }
@@ -94,7 +94,7 @@ input:hover {
   .gallery {
     column-count: 4;
   }
-} */
+}
 
 .captionName {
   color: black;
@@ -113,9 +113,8 @@ input:hover {
 .nav {
   color: gray;
   font-family: 'Bangers', cursive;
-  /* padding: 2rem; */
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .oops {

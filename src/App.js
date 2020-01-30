@@ -22,7 +22,6 @@ function App() {
 
   useEffect(() => {
     getData(searchString);
-    // thisCharacter(finalResult);
   }, []);
 
   function getData() {

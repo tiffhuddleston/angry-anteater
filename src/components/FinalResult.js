@@ -13,7 +13,7 @@ function FinalResult(props) {
         setCharacter(response);
       })
       .catch(console.error);
-  }, []);
+  }, [match.params.id]);
 
   if (!character) {
     return null;
@@ -22,10 +22,8 @@ function FinalResult(props) {
   return (
     <Card className="describe" style={{ width: '18rem' }}>
       <Card.Img
-        img="true"
         key={character.id}
         variant="top"
-        img
         src={character.image}
         alt="character"
       />
@@ -44,9 +42,3 @@ function FinalResult(props) {
 }
 
 export default FinalResult;
-
-// {/* <img src={character.image} alt="character" />
-// <p>Name: {character.name}</p>
-// <p>Status: {character.status}</p>
-// <p>Place of Origin: {character.origin.name}</p>
-// <p>Last Knows Location: {character.location.name}</p> */}
