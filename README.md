@@ -4,8 +4,6 @@
 
 ![screen shot 2020-01-29 at 8 13 51 pm](https://media.git.generalassemb.ly/user/23697/files/e2deb400-42d3-11ea-9b6d-a4d951e7b793)
 
-### What things have you already tried to solve the problem?
-
 ![screenshot 2020-01-29 20 15 08](https://media.git.generalassemb.ly/user/23697/files/1588ac80-42d4-11ea-9209-1536355fa1f6)
 
 Rick and Morty Search allows you to search for your favorite characters or learn more about new ones. Enter the character name to search for him/her/them/it or select one of the random iterations of the man characters that appear on the homepage.
@@ -32,7 +30,7 @@ Rick and Morty Search allows you to search for your favorite characters or learn
 
 ## Technologies
 
-Written with React and CSS Flexbox using React Bootstrap
+Written with React and CSS Flexbox using React Bootstrap and React Router
 
 API- (https://rickandmortyapi.com/api/)
 

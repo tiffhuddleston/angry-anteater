@@ -59,16 +59,11 @@ input:hover {
   display: flex;
 }
 
-@media (min-width: 600px) {
-  input + button {
-    margin-left: 1rem;
-  }
-}
-
 .title {
   font-family: 'Bangers', cursive;
-
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .names {
@@ -83,6 +78,9 @@ input:hover {
   }
   .gallery {
     column-count: 2;
+  }
+  .head {
+    font-size: 1rem;
   }
 }
 
@@ -112,12 +110,24 @@ input:hover {
   font-family: 'Bangers', cursive;
 }
 
-.home {
-  color: white;
+.nav {
+  color: gray;
   font-family: 'Bangers', cursive;
+  /* padding: 2rem; */
+  display: flex;
+  justify-content: center;
 }
 
 .oops {
   color: gray;
   font-family: 'Bangers', cursive;
+}
+
+.about {
+  color: gray;
+  font-family: 'Bangers', cursive;
+}
+
+.nav:hover {
+  color: green;
 }

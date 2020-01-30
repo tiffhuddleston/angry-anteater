@@ -21,7 +21,14 @@ function FinalResult(props) {
 
   return (
     <Card className="describe" style={{ width: '18rem' }}>
-      <Card.Img variant="top" img src={character.image} alt="character" />
+      <Card.Img
+        img="true"
+        key={character.id}
+        variant="top"
+        img
+        src={character.image}
+        alt="character"
+      />
       <Card.Body>
         <Card.Title>{character.name}</Card.Title>
       </Card.Body>

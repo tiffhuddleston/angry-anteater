@@ -7,7 +7,11 @@ function SearchHeader({ lastSearch }) {
       <header>
         <h1 className="title">Rick and Morty Search</h1>
         <Link to="/">
-          <h2 className="home">Home</h2>
+          <h2 className="nav">Home</h2>
+        </Link>
+
+        <Link to="/about">
+          <h2 className="nav"> About</h2>
         </Link>
       </header>
       <p className="muted">

@@ -4,6 +4,7 @@ import SearchHeader from './components/SearchHeader';
 import SearchForm from './components/SearchForm';
 import SearchResults from './components/SearchResults';
 import FinalResult from './components/FinalResult';
+import About from './components/About';
 
 let charArray = ['Beth', 'Jerry', 'Rick', 'Morty', 'Summer'];
 
@@ -59,6 +60,13 @@ function App() {
         path="/"
         render={() => {
           return <SearchResults results={results} />;
+        }}
+      />
+      <Route
+        exact
+        path="/about"
+        render={() => {
+          return <About />;
         }}
       />
       <Route
