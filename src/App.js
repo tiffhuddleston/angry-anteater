@@ -5,12 +5,9 @@ import SearchForm from './components/SearchForm';
 import SearchResults from './components/SearchResults';
 import FinalResult from './components/FinalResult';
 
-
 let charArray = ['Beth', 'Jerry', 'Rick', 'Morty', 'Summer'];
 
 let randomChar = charArray[Math.floor(Math.random() * charArray.length)];
-
-console.log(randomChar);
 
 function App() {
   const searchOptions = {

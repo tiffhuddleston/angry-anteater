@@ -20,23 +20,19 @@ function FinalResult(props) {
   }
 
   return (
-    <div className="describe">
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" img src={character.image} alt="character" />
-        <Card.Body>
-          <Card.Title>{character.name}</Card.Title>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>Status: {character.status}</ListGroupItem>
-          <ListGroupItem>
-            Place of Origin: {character.origin.name}
-          </ListGroupItem>
-          <ListGroupItem>
-            Last Knows Location: {character.location.name}
-          </ListGroupItem>
-        </ListGroup>
-      </Card>
-    </div>
+    <Card className="describe" style={{ width: '18rem' }}>
+      <Card.Img variant="top" img src={character.image} alt="character" />
+      <Card.Body>
+        <Card.Title>{character.name}</Card.Title>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroupItem>Status: {character.status}</ListGroupItem>
+        <ListGroupItem>Place of Origin: {character.origin.name}</ListGroupItem>
+        <ListGroupItem>
+          Last Knows Location: {character.location.name}
+        </ListGroupItem>
+      </ListGroup>
+    </Card>
   );
 }
 

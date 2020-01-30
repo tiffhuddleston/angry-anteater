@@ -5,7 +5,9 @@ import { Card, CardColumns } from 'react-bootstrap';
 function SearchResults(props) {
   const { results } = props;
 
-  return (
+  return !results ? (
+    <h2 className="oops">No Characters Found</h2>
+  ) : (
     <div className="gallery">
       {results &&
         results.map(item => (
@@ -25,7 +27,5 @@ function SearchResults(props) {
     </div>
   );
 }
-// {/* <img src={item.image} alt={item.name} />
-// {item.name} */}
 
 export default SearchResults;
