@@ -1,8 +1,9 @@
 :root {
-  --primary: #2b4b74;
-  --secondary: #296935;
-  --secondary-light: #5aa367;
+  --primary: #f723a9;
+  --secondary: #37941b;
+  --secondary-light: #59db39;
   --white: #fff;
+  --shadow: #40f040;
 }
 
 body {
@@ -23,6 +24,10 @@ button {
   padding: 0.75rem 1rem;
   text-transform: uppercase;
   font-family: 'Bangers', cursive;
+}
+
+button:hover {
+  filter: drop-shadow(2px 2px 30px #c2f98e);
 }
 
 input + button {
@@ -60,15 +65,21 @@ input:hover {
 }
 
 .title {
-  font-family: 'Bangers', cursive;
-  color: white;
+  font-family: 'getSchwifty';
+  color: rgb(78, 224, 20);
   display: flex;
   justify-content: center;
+  font-size: 4rem;
+  align-content: center;
 }
 
 .names {
-  font-family: 'Bangers', cursive;
+  font-family: 'getSchwifty';
   color: white;
+}
+
+.profilePic:hover {
+  filter: drop-shadow(2px 2px 30px #c2f98e);
 }
 
 @media (min-width: 600px) {
@@ -96,6 +107,14 @@ input:hover {
   }
 }
 
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .captionName {
   color: black;
 }
@@ -110,23 +129,34 @@ input:hover {
   font-family: 'Bangers', cursive;
 }
 
-.nav {
-  color: gray;
+.navBar {
   font-family: 'Bangers', cursive;
   display: flex;
+  /* justify-content: space-between; */
+
   justify-content: center;
 }
 
+.nav {
+  color: #c2f98e;
+  padding: 0px 10px;
+}
+
 .oops {
-  color: gray;
+  color: #c2f98e;
   font-family: 'Bangers', cursive;
 }
 
 .about {
-  color: gray;
+  color: #c2f98e;
   font-family: 'Bangers', cursive;
 }
 
 .nav:hover {
-  color: green;
+  color: rgb(78, 224, 20);
+}
+
+@font-face {
+  font-family: 'getSchwifty';
+  src: local('getSchwifty'), url(./font/get_schwifty.ttf) format('truetype');
 }

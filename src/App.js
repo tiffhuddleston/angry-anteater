@@ -5,10 +5,13 @@ import SearchForm from './components/SearchForm';
 import SearchResults from './components/SearchResults';
 import FinalResult from './components/FinalResult';
 import About from './components/About';
+import Random from './components/Random';
 
-let charArray = ['Beth', 'Jerry', 'Rick', 'Morty', 'Summer'];
+// let charArray = ['Beth', 'Jerry', 'Rick', 'Morty', 'Summer'];
 
-let randomChar = charArray[Math.floor(Math.random() * charArray.length)];
+// let randomChar = charArray[Math.floor(Math.random() * charArray.length)];
+
+let randomPage = Math.floor(Math.random() * 26);
 
 function App() {
   const searchOptions = {
@@ -25,7 +28,12 @@ function App() {
   }, []);
 
   function getData() {
-    const url = `${searchOptions.api}${searchOptions.endpoint}?name=${searchString}`;
+    let url =
+      searchString === ''
+        ? `${searchOptions.api}${searchOptions.endpoint}?page=${randomPage}`
+        : `${searchOptions.api}${searchOptions.endpoint}?name=${searchString}`;
+
+    // `${searchOptions.api}${searchOptions.endpoint}?page=${randomPage}?name=${searchString}`;
 
     fetch(url)
       .then(response => response.json())
@@ -59,6 +67,13 @@ function App() {
         path="/"
         render={() => {
           return <SearchResults results={results} />;
+        }}
+      />
+      <Route
+        exact
+        path="/random"
+        render={() => {
+          return <Random />;
         }}
       />
       <Route

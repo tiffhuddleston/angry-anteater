@@ -6,16 +6,18 @@ function SearchHeader({ lastSearch }) {
     <div className="head">
       <header>
         <h1 className="title">Rick and Morty Search</h1>
-        <Link to="/">
-          <h2 className="nav">Home</h2>
-        </Link>
-        <Link to="/about">
-          <h2 className="nav"> About</h2>
-        </Link>
+        <div className="navBar">
+          <Link to="/">
+            <h2 className="nav">Home</h2>
+          </Link>
+          <Link to="/random">
+            <h2 className="nav">Random</h2>
+          </Link>
+          <Link to="/about">
+            <h2 className="nav"> About</h2>
+          </Link>
+        </div>
       </header>
-      <p className="muted">
-        Showing results for <strong>{lastSearch}</strong>
-      </p>
     </div>
   );
 }
