@@ -33,8 +33,6 @@ function App() {
         ? `${searchOptions.api}${searchOptions.endpoint}?page=${randomPage}`
         : `${searchOptions.api}${searchOptions.endpoint}?name=${searchString}`;
 
-    // `${searchOptions.api}${searchOptions.endpoint}?page=${randomPage}?name=${searchString}`;
-
     fetch(url)
       .then(response => response.json())
       .then(response => {
