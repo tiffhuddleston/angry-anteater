@@ -7,17 +7,13 @@ import FinalResult from './components/FinalResult';
 import About from './components/About';
 import Random from './components/Random';
 
-// let charArray = ['Beth', 'Jerry', 'Rick', 'Morty', 'Summer'];
-
-// let randomChar = charArray[Math.floor(Math.random() * charArray.length)];
-
-let randomPage = Math.floor(Math.random() * 26);
-
 function App() {
   const searchOptions = {
     api: 'https://rickandmortyapi.com/api/',
     endpoint: 'character/'
   };
+
+  let randomPage = Math.floor(Math.random() * 26);
 
   const [results, setData] = useState([]);
   const [searchString, setSearchString] = useState('');
